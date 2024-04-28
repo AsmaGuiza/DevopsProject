@@ -43,9 +43,7 @@ jobs:
       - name: Run Django server
         run: |
           python Backend/VisionBackend/manage.py runserver &
-      - name: Test debug
-        run: echo "The test is correct"
-        
+
       - name: Test debug
         run: |
-          python Backend/VisionBackend/manage.py test
+          python Backend/VisionBackend/manage.py test api.tests
