@@ -8,3 +8,5 @@ sqlparse ==0.4.4
 typing-extensions ==4.10.0
 tzdata ==2024.1
 drf-yasg
+pytest
+pytest-django 
