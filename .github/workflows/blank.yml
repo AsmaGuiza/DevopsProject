@@ -42,7 +42,6 @@ jobs:
           python Backend/VisionBackend/manage.py migrate
       - name: Run Django server
         run: |
-          python Backend/VisionBackend/manage.py runserver&
-          background : true
+          python Backend/VisionBackend/manage.py runserver &
       - name: Test debug
         run: echo "The test is correct"
