@@ -75,6 +75,7 @@ def test_create_model(self):
     
     # Vérifie que le modèle nouvellement créé est renvoyé dans la réponse
     self.assertEqual(json.loads(response.content)['name'], 'New Model')
+```
 
 - For production deployments, refer to the Django documentation on deploying Django applications in production.
 
