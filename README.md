@@ -56,6 +56,25 @@ This guide will walk you through the steps to run the Django backend API for Vis
   ```bash
   exit
   ```
+#### Test de création de modèle
+
+```python
+def test_create_model(self):
+    # Données à envoyer dans la requête POST
+    data = {
+        'name': 'New Model',
+        'description': 'Description du nouveau modèle'
+        # Inclure d'autres champs si nécessaire
+    }
+    
+    # Envoie une requête POST pour créer une nouvelle instance de modèle
+    response = self.client.post(reverse('model-list'), data=data)
+    
+    # Vérifie que le code d'état est 201 (Créé)
+    self.assertEqual(response.status_code, 201)
+    
+    # Vérifie que le modèle nouvellement créé est renvoyé dans la réponse
+    self.assertEqual(json.loads(response.content)['name'], 'New Model')
 
 - For production deployments, refer to the Django documentation on deploying Django applications in production.
 
