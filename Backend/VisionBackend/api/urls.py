@@ -1,6 +1,10 @@
-from django.urls import path
+from django.urls import path,include
 from .views import AIModelListView
+from rest_framework.routers import DefaultRouter
+
+router = DefaultRouter()
+router.register('models',AIModelListView)
 
 urlpatterns = [
-    path('models/', AIModelListView.as_view(), name='model-list'),
+    path('', include(router.urls)),
 ]

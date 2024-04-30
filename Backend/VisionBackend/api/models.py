@@ -8,8 +8,8 @@ class AIModel(models.Model):
     confusion_matrix = models.ImageField(upload_to='images/',null=True,blank=True)
     train_validation_acc = models.ImageField(upload_to='images/',null=True,blank=True)
     train_validation_loss = models.ImageField(upload_to='images/',null=True,blank=True)
-    model_file = models.FileField(upload_to='models/')
-    dataset = models.CharField(max_length=100,default='')
+    model_file = models.FileField(upload_to='models/',null=True,blank=True)
+    dataset = models.CharField(max_length=100,default='',null=True,blank=True)
 
     
 

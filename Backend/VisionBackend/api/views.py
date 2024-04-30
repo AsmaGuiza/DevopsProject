@@ -1,7 +1,7 @@
-from rest_framework import generics
+from rest_framework import viewsets
 from .models import AIModel
 from .serializers import AIModelSerializer
 
-class AIModelListView(generics.ListAPIView):
+class AIModelListView(viewsets.ModelViewSet):
     queryset = AIModel.objects.all()
     serializer_class = AIModelSerializer
