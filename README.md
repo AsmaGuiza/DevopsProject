@@ -75,6 +75,7 @@ def test_create_model(self):
     
     # Vérifie que le modèle nouvellement créé est renvoyé dans la réponse
     self.assertEqual(json.loads(response.content)['name'], 'New Model')
+===============================================================================================
 def test_create_model(self):
   # Data to send in POST request
   data = {
@@ -92,6 +93,8 @@ def test_create_model(self):
   
   # Assert that the newly created model is returned in the response
   self.assertEqual(json.loads(response.content)['name'], 'New Model')
+===============================================================================================
+
 def test_retrieve_model(self):
   # Create a model instance
   new_model = AIModel.objects.create(name='Test Model', description='Description of the test model',f1_score=0.8,accuracy=0.8)
